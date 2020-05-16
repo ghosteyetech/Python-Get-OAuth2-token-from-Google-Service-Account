@@ -15,9 +15,9 @@ import yaml
 CREDENTIAL_SCOPES = ["https://www.googleapis.com/auth/cloud-platform"]
 CREDENTIALS_KEY_PATH = 'wn-cloud-275704-52dd099c2945.json' #NEW wncp
 
-project_id = "wn-cloud-275704"
+project_id = "<project_id>"
 zone = "us-central1-c"
-cluster_id = "wn-cloud-portal-qa"
+cluster_id = "<cluster_id>"
 
 def get_service_account_token():
     credentials = service_account.Credentials.from_service_account_file(
@@ -32,7 +32,7 @@ def get_service_account_token():
     # return credentials.token
 
 def getClusterNodes(token):
-    apiKeyK8s = "AIzaSyB4sDvn8CGxVh1z8fLd8wn3E9J2GXhjJ5I"
+    apiKeyK8s = "<apiKeyK8s>"
     # endpoint = "https://container.googleapis.com/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}?key={apiKey}".format(projectId = project_id, zone = zone, clusterId = cluster_id, apiKey = apiKeyK8s)
     endpoint = "https://container.googleapis.com/v1/projects/{projectId}/zones/{zone}/clusters?key={apiKey}".format(projectId = project_id, zone = zone, apiKey = apiKeyK8s)
 
