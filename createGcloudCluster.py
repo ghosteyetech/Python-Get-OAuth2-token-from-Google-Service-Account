@@ -10,12 +10,12 @@ import requests as httpsRequests
 import json
 
 CREDENTIAL_SCOPES = ["https://www.googleapis.com/auth/cloud-platform"]
-CREDENTIALS_KEY_PATH = 'wn-cloud-275704-52dd099c2945.json'
+CREDENTIALS_KEY_PATH = '<service_account_json_file_path>'
 
-project_id = "wn-cloud-275704"
-zone = "us-central1-c"
-cluster_id = "wn-cloud-portal-qa"
-apiKeyK8s = "AIzaSyB4sDvn8CGxVh1z8fLd8wn3E9J2GXhjJ5I"
+project_id = "<project_id>"
+zone = "<zone>"
+cluster_id = "<cluster_id>"
+apiKeyK8s = "<apiKeyK8s>"
 
 def get_service_account_token():
     credentials = service_account.Credentials.from_service_account_file(
